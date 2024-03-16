@@ -7,6 +7,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 app.post("/", (req, res) => {
   const { name, email, message } = req.body;
 
